@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-solera-blue: #123845;
+  --color-solera-deep: #071f2a;
+  --color-solera-blue-soft: #315762;
+
+  --color-solera-ivory: #f5f0e8;
+  --color-solera-cream: #eae0d2;
+  --color-solera-white: #fbfaf7;
+
+  --color-solera-gold: #c89a55;
+  --color-solera-gold-soft: #d8b77c;
+
+  --color-solera-burgundy: #713535;
+
+  --color-solera-ink: #171717;
+  --color-solera-muted: #6f6a64;
+
+  --font-sans: var(--font-vazirmatn);
+  --font-display: var(--font-cormorant);
+  --font-fa-display: var(--font-naskh);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-solera-ivory);
+  color: var(--color-solera-ink);
+  font-family: var(--font-vazirmatn), sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--color-solera-blue);
+  color: var(--color-solera-white);
+}
