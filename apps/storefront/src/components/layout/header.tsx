@@ -26,19 +26,19 @@ export function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 text-white">
       {/* NO MAX WIDTH HERE - intentional */}
-      <div className="px-5 sm:px-8 lg:px-12 xl:px-14">
+      <div className="px-5 sm:px-8 lg:px-12 2xl:px-[4.5vw]">
         <div
           dir="ltr"
-          className="grid h-[82px] grid-cols-[1fr_auto_1fr] items-center border-b border-white/[0.08] lg:h-[98px]"
+          className="grid h-[82px] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center border-b border-white/[0.08] lg:h-[8.55vw] lg:min-h-[98px]"
         >
           {/* LEFT ACTIONS */}
-          <div className="flex items-center justify-start gap-4 lg:gap-5">
+          <div className="flex items-center justify-start gap-4 lg:gap-5 2xl:gap-[2.8vw] 2xl:-translate-y-[0.8vw]">
             <button
               type="button"
               aria-label="سبد خرید"
               className="text-white/90 transition hover:text-solera-gold"
             >
-              <ShoppingBag size={20} strokeWidth={1.25} />
+              <ShoppingBag size={20} strokeWidth={1.25} className="2xl:h-[1.6vw] 2xl:w-[1.6vw]" />
             </button>
 
             <button
@@ -46,7 +46,7 @@ export function Header() {
               aria-label="حساب کاربری"
               className="hidden text-white/90 transition hover:text-solera-gold sm:block"
             >
-              <UserRound size={20} strokeWidth={1.25} />
+              <UserRound size={20} strokeWidth={1.25} className="2xl:h-[1.6vw] 2xl:w-[1.6vw]" />
             </button>
 
             <button
@@ -54,16 +54,10 @@ export function Header() {
               aria-label="جستجو"
               className="text-white/90 transition hover:text-solera-gold"
             >
-              <Search size={20} strokeWidth={1.25} />
+              <Search size={20} strokeWidth={1.25} className="2xl:h-[1.6vw] 2xl:w-[1.6vw]" />
             </button>
 
-            <button
-              type="button"
-              className="hidden items-center gap-1 text-[12px] text-white/75 transition hover:text-solera-gold md:flex"
-            >
-              Fa
-              <ChevronDown size={12} strokeWidth={1.25} />
-            </button>
+            
           </div>
 
           {/* CENTER LOGO */}
@@ -74,7 +68,7 @@ export function Header() {
           {/* RIGHT DESKTOP NAV */}
           <nav
             dir="rtl"
-            className="hidden items-center justify-end gap-8 text-[13px] lg:flex xl:gap-10"
+            className="hidden items-center justify-start gap-[3.1vw] text-[13px] lg:flex lg:text-[clamp(13px,1vw,19px)] 2xl:-translate-y-[0.8vw]"
           >
             {navItems.map((item, index) => (
               <Link

@@ -58,6 +58,17 @@ img {
   max-width: 100%;
 }
 
+.solera-paper {
+  background-image:
+    radial-gradient(ellipse at 12% 20%, rgb(123 94 69 / 7%), transparent 38%),
+    radial-gradient(ellipse at 88% 80%, rgb(123 94 69 / 5%), transparent 42%);
+}
+
+.solera-stone {
+  background-image:
+    radial-gradient(ellipse at 65% 15%, rgb(85 112 118 / 8%), transparent 48%);
+}
+
 ::selection {
   background: var(--color-solera-blue);
   color: var(--color-solera-white);
